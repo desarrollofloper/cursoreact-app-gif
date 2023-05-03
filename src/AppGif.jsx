@@ -37,7 +37,7 @@ export const AppGif = () => {
         <>
             <header>
                 <div style={{ display: 'inline-flex', alignItems: 'center', }}>
-                    <h1 style={{ marginRight: '1rem', }}>App Gif</h1><span>{ GIPHY_API_KEY }</span>
+                    <h1 style={{ marginRight: '1rem', }}>App Gif</h1>
                 </div>
                 <AgregarCategoria
                     onAgregarCategoria={ handleAgregarCategoria }
