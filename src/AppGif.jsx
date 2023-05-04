@@ -10,7 +10,7 @@ export const AppGif = () => {
     const handleAgregarCategoria = (categoria, onSuccess, onError) => {
         console.log(categoria);
         if(categoria.trim().length < 5){
-            onError();
+            onError('busquedacorta');
             return;
         }
         if((categorias.filter(item => item.toLowerCase() == categoria.toLowerCase())).length){

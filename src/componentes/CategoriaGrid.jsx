@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { CategoriaGridItem } from './CategoriaGridItem';
@@ -26,6 +26,6 @@ export const CategoriaGrid = ({ categoria }) => {
     )
 }
 
-// CategoriaGrid.propTypes = {
-//     categoria: PropTypes.string.isRequired,
-// }
+CategoriaGrid.propTypes = {
+    categoria: PropTypes.string.isRequired,
+}

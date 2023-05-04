@@ -4,14 +4,22 @@ import { useState } from 'react';
 
 export const AgregarCategoria = ({ onAgregarCategoria /* setCategorias */ }) => {
     const [inputValue, setInputValue] = useState('');
+    const [codigoError, setCodigoError] = useState('');
     const handleInputValueChange = (event) => {
         setInputValue(event.target.value);
     };
     const handleSubmitform = (event) => {
         event.preventDefault();
         console.log(event);
-        if(inputValue.trim().length < 2) return;
-        onAgregarCategoria(inputValue, () => { setInputValue(''); }, (codigo = '') => {
+        if(inputValue.trim().length < 2){
+            
+            return;
+        }
+        onAgregarCategoria(inputValue, () => {
+            setInputValue('');
+            setCodigoError('');
+        }, (codigo = '') => {
+            setCodigoError(codigo);
             if(codigo == 'duplicado') setInputValue('');
         });
         // setCategorias(categorias => [inputValue, ...categorias]);
@@ -25,6 +33,7 @@ export const AgregarCategoria = ({ onAgregarCategoria /* setCategorias */ }) => 
                         <FontAwesomeIcon icon={ faMagnifyingGlass } />
                     </button>
                 </div>
+                { codigoError == 'busquedacorta' ? <div className="mt-2"><small>La entrada es muy corta.</small></div> : '' }
             </div>
         </form>
     )
