@@ -17,7 +17,11 @@ export const CategoriaGrid = ({ categoria }) => {
                     ? <div>Cargando<FontAwesomeIcon icon={ faSpinner } spin className='ml-2' /></div>
                     : (
                         gifs.length
-                        ? <div className="contenedorCategoriaGridItem">{ gifs.map(gif => ( <CategoriaGridItem key={ gif.id } gif={ gif } /> )) }</div>
+                        ? <div className="contenedorCategoriaGridItem">{ gifs.map(gif => ( <CategoriaGridItem key={ gif.id } gif={ {
+                            url: gif.url,
+                            imagen_url: gif.images.fixed_height_small.url,
+                            titulo: gif.title,
+                        } } /> )) }</div>
                         : <div>Sin coincidencias</div>
                     )
                 }

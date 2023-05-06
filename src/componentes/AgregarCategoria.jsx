@@ -11,10 +11,9 @@ export const AgregarCategoria = ({ onAgregarCategoria /* setCategorias */ }) => 
     const handleSubmitform = (event) => {
         event.preventDefault();
         console.log(event);
-        if(inputValue.trim().length < 2){
-            
-            return;
-        }
+        // if(inputValue.trim().length < 2){
+        //     return;
+        // }
         onAgregarCategoria(inputValue, () => {
             setInputValue('');
             setCodigoError('');
@@ -33,7 +32,7 @@ export const AgregarCategoria = ({ onAgregarCategoria /* setCategorias */ }) => 
                         <FontAwesomeIcon icon={ faMagnifyingGlass } />
                     </button>
                 </div>
-                { codigoError == 'busquedacorta' ? <div className="mt-2"><small>La entrada es muy corta.</small></div> : '' }
+                { inputValue && codigoError == 'busquedacorta' ? <div className="mt-2"><small>La entrada es muy corta.</small></div> : '' }
             </div>
         </form>
     )
