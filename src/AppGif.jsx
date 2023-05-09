@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { AgregarCategoria, CategoriaGrid } from './componentes';
-import { GIPHY_API_KEY } from './config';
 import './assets/css/AppGif.css';
 
 export const AppGif = () => {

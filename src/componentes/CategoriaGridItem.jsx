@@ -15,8 +15,10 @@ export const CategoriaGridItem = ({gif}) => {
 
 CategoriaGridItem.propTypes = {
     gif: PropTypes.shape({
+        // id: PropTypes.string,
         url: PropTypes.string.isRequired,
         imagen_url: PropTypes.string.isRequired,
         titulo: PropTypes.string,
+        // imagen_original_url: PropTypes.string,
     }),
 }

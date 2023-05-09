@@ -1,16 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pruebas en CategoriaGridItem Snapshot 1`] = `
+exports[`Pruebas en componentes/CategoriaGridItem Match Snapshot 1`] = `
 <div>
   <a
     class="CategoriaGridItem"
-    href=""
+    href="https://foo.bar"
     target="_blank"
   >
     <img
-      src=""
-      title=""
+      src="https://foo.bar/"
+      title="Foou"
     />
+    <span
+      class="detalleItem"
+    >
+      <span>
+        Foou
+      </span>
+    </span>
   </a>
 </div>
 `;

@@ -51,7 +51,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:c08dcf781a7c1b931faf794726bf025e56278fc9bc226f75f5eb3cc0dd281c7b8736a9c04d2b8a3e25ec922d809be50cfecab08ade1c1174e3eb5fe13437ff7c#npm:18.2.0"],\
             ["react-test-renderer", "virtual:c08dcf781a7c1b931faf794726bf025e56278fc9bc226f75f5eb3cc0dd281c7b8736a9c04d2b8a3e25ec922d809be50cfecab08ade1c1174e3eb5fe13437ff7c#npm:18.2.0"],\
-            ["vite", "virtual:c08dcf781a7c1b931faf794726bf025e56278fc9bc226f75f5eb3cc0dd281c7b8736a9c04d2b8a3e25ec922d809be50cfecab08ade1c1174e3eb5fe13437ff7c#npm:4.3.1"]\
+            ["vite", "virtual:c08dcf781a7c1b931faf794726bf025e56278fc9bc226f75f5eb3cc0dd281c7b8736a9c04d2b8a3e25ec922d809be50cfecab08ade1c1174e3eb5fe13437ff7c#npm:4.3.1"],\
+            ["whatwg-fetch", "npm:3.6.2"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -84,7 +85,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:c08dcf781a7c1b931faf794726bf025e56278fc9bc226f75f5eb3cc0dd281c7b8736a9c04d2b8a3e25ec922d809be50cfecab08ade1c1174e3eb5fe13437ff7c#npm:18.2.0"],\
             ["react-test-renderer", "virtual:c08dcf781a7c1b931faf794726bf025e56278fc9bc226f75f5eb3cc0dd281c7b8736a9c04d2b8a3e25ec922d809be50cfecab08ade1c1174e3eb5fe13437ff7c#npm:18.2.0"],\
-            ["vite", "virtual:c08dcf781a7c1b931faf794726bf025e56278fc9bc226f75f5eb3cc0dd281c7b8736a9c04d2b8a3e25ec922d809be50cfecab08ade1c1174e3eb5fe13437ff7c#npm:4.3.1"]\
+            ["vite", "virtual:c08dcf781a7c1b931faf794726bf025e56278fc9bc226f75f5eb3cc0dd281c7b8736a9c04d2b8a3e25ec922d809be50cfecab08ade1c1174e3eb5fe13437ff7c#npm:4.3.1"],\
+            ["whatwg-fetch", "npm:3.6.2"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -9164,6 +9166,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["whatwg-encoding", "npm:2.0.0"],\
             ["iconv-lite", "npm:0.6.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["whatwg-fetch", [\
+        ["npm:3.6.2", {\
+          "packageLocation": "./.yarn/cache/whatwg-fetch-npm-3.6.2-4bdf324792-ee976b7249.zip/node_modules/whatwg-fetch/",\
+          "packageDependencies": [\
+            ["whatwg-fetch", "npm:3.6.2"]\
           ],\
           "linkType": "HARD"\
         }]\

@@ -1,16 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export const AgregarCategoria = ({ onAgregarCategoria /* setCategorias */ }) => {
     const [inputValue, setInputValue] = useState('');
     const [codigoError, setCodigoError] = useState('');
-    const handleInputValueChange = (event) => {
+    const onInputValueChange = (event) => {
         setInputValue(event.target.value);
     };
-    const handleSubmitform = (event) => {
+    const onSubmitform = (event) => {
         event.preventDefault();
-        console.log(event);
         // if(inputValue.trim().length < 2){
         //     return;
         // }
@@ -24,10 +24,10 @@ export const AgregarCategoria = ({ onAgregarCategoria /* setCategorias */ }) => 
         // setCategorias(categorias => [inputValue, ...categorias]);
     };
     return (
-        <form onSubmit={ handleSubmitform }>
+        <form onSubmit={ onSubmitform } role="form">
             <div className='bloque-input mt-2'>
                 <div style={{ display:'flex', alignItems:'center', }}>
-                    <input type='search' placeholder='Buscar' className='mr-3 fs-1_4em' value={ inputValue } onChange={ handleInputValueChange } required />
+                    <input role="search" type='search' placeholder='Buscar' className='mr-3 fs-1_4em' value={ inputValue } onChange={ onInputValueChange } required />
                     <button type='submit' className='boton botonTema'>
                         <FontAwesomeIcon icon={ faMagnifyingGlass } />
                     </button>
@@ -36,4 +36,8 @@ export const AgregarCategoria = ({ onAgregarCategoria /* setCategorias */ }) => 
             </div>
         </form>
     )
+}
+
+AgregarCategoria.propTypes = {
+    onAgregarCategoria: PropTypes.func.isRequired,
 }
