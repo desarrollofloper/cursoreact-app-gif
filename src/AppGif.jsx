@@ -7,7 +7,6 @@ export const AppGif = () => {
     const [categorias, setCategorias] = useState([]);
 
     const handleAgregarCategoria = (categoria, onSuccess, onError) => {
-        console.log(categoria);
         if(categoria.trim().length < 5){
             onError('busquedacorta');
             return;
@@ -34,16 +33,15 @@ export const AppGif = () => {
 
     return (
         <>
-            <header>
+            <header data-testid='header'>
                 <div style={{ display: 'inline-flex', alignItems: 'center', }}>
                     <h1 style={{ marginRight: '1rem', }}>App Gif</h1>
                 </div>
                 <AgregarCategoria
                     onAgregarCategoria={ handleAgregarCategoria }
-                    // setCategorias={ setCategorias }
                 />
             </header>
-            <main>
+            <main data-testid='main'>
                 <div>
                     { bloqueCategoriaGrids }
                 </div>

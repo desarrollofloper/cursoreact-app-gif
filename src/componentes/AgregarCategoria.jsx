@@ -24,7 +24,7 @@ export const AgregarCategoria = ({ onAgregarCategoria /* setCategorias */ }) => 
         // setCategorias(categorias => [inputValue, ...categorias]);
     };
     return (
-        <form onSubmit={ onSubmitform } role="form">
+        <form onSubmit={ onSubmitform } role="form" data-testid='AgregarCategoria'>
             <div className='bloque-input mt-2'>
                 <div style={{ display:'flex', alignItems:'center', }}>
                     <input role="search" type='search' placeholder='Buscar' className='mr-3 fs-1_4em' value={ inputValue } onChange={ onInputValueChange } required />

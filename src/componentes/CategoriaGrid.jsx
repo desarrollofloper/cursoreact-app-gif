@@ -8,7 +8,7 @@ export const CategoriaGrid = ({ categoria }) => {
     const {gifs, cargandoGifs} = useObtenerGifs(categoria);
     const backgroundImage = !cargandoGifs && gifs.length && `url(${ gifs[0].imagen_original_url })`;
     return (
-        <div className='CategoriaGrid' style={{ backgroundImage }}>
+        <div className='CategoriaGrid' style={{ backgroundImage }} data-testid='CategoriaGrid'>
             <h2>{ categoria }</h2>
             <div className='mt-2'>
                 {
